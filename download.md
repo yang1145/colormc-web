@@ -1,0 +1,69 @@
+---
+title: 下载PCL-CE启动器
+---
+
+<script setup>
+import { ref } from 'vue'
+
+const version = ref({ 
+  version: '2.13.3', 
+  date: '2025-10-05', 
+  size: '11.6MB',
+  features: ['自 2.13.0 起，PCL CE 将需要 .NET 8 桌面运行时才能运行。', '如果你还未安装，请下载并安装 .NET 8 桌面运行时。'],
+  downloadLink: '/PCL2_CE_Release_x64.exe'
+})
+</script>
+
+# 下载PCL启动器
+
+<div class="version-card">
+  <h3>{{ version.version }}</h3>
+  <p class="version-info">发布日期：{{ version.date }} | 大小：{{ version.size }}</p>
+  <ul>
+    <li v-for="(feature, index) in version.features" :key="index">{{ feature }}</li>
+  </ul>
+  <a :href="version.downloadLink" class="download-button">立即下载</a>
+</div>
+
+<style scoped>
+.version-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.version-card h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.version-info {
+  color: #7f8c8d;
+  font-size: 0.9em;
+}
+
+.version-card ul {
+  padding-left: 20px;
+}
+
+.version-card li {
+  margin-bottom: 5px;
+}
+
+.download-button {
+  display: inline-block;
+  background-color: #3eaf7c;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: #2c8a62;
+}
+</style>

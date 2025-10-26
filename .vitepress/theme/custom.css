@@ -1,0 +1,306 @@
+@import "../../minecraft.css";
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
+  --vp-home-hero-image-filter: blur(40px);
+  /* 确保文本在明亮和黑暗模式下都可见 */
+  --vp-home-hero-text-color: #000000;
+}
+
+/* 明亮模式下按钮文字颜色 */
+html:not(.dark) .button {
+  color: #ffffff;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+html:not(.dark) .button-primary {
+  color: #ffffff;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+html:not(.dark) .button-secondary {
+  color: #ffffff;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* 明亮模式下的特殊设置 */
+html:not(.dark) {
+  --vp-home-hero-text-color: #000000;
+  --vp-home-hero-name-color: transparent;
+}
+
+/* 黑暗模式下的特殊设置 */
+html.dark {
+  --vp-home-hero-text-color: #ffffff;
+  --vp-home-hero-name-color: transparent;
+}
+
+/* 确保在明亮模式下副标题文本可见 */
+html.light .VPHomeHero .tagline,
+html:not(.dark) .VPHomeHero .tagline,
+html:not(.dark) .VPHomeHero .text {
+  color: #000000 !important;
+}
+
+/* 确保在黑暗模式下副标题文本为白色 */
+html.dark .VPHomeHero .tagline,
+html.dark .VPHomeHero .text {
+  color: #ffffff !important;
+}
+
+/* 直接针对副标题的样式 */
+.VPHomeHero .tagline,
+.VPHomeHero .text {
+  color: #000000 !important;
+}
+
+.dark .VPHomeHero .tagline,
+.dark .VPHomeHero .text {
+  color: #ffffff !important;
+}
+
+/* 针对明亮模式下所有可能的副标题元素 */
+html:not(.dark) .VPHomeHero .tagline *,
+html.light .VPHomeHero .tagline *,
+html:not(.dark) .VPHomeHero .text *,
+html.light .VPHomeHero .text * {
+  color: #000000 !important;
+}
+
+/* 主标题在明亮模式下的样式 */
+html:not(.dark) .VPHomeHero .name,
+html.light .VPHomeHero .name {
+  color: transparent !important;
+  background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* 主标题在黑暗模式下的样式 */
+html.dark .VPHomeHero .name {
+  color: #ffffff !important;
+}
+
+/* 确保主标题渐变背景在明亮模式下正常 */
+html:not(.dark) .VPHomeHero .name span {
+  background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+
+/* 在黑暗模式下保持原来的渐变效果 */
+html.dark .VPHomeHero .name span {
+  background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+@media (min-width: 640px) {
+  .VPHomeHero .actions {
+    margin-top: 2rem;
+  }
+  
+  .VPHomeHero .action-button {
+    display: inline-block;
+    border: 1px solid transparent;
+    text-align: center;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color 0.25s, border-color 0.25s, background-color 0.25s;
+    padding: 12px 32px;
+    font-size: 22px;
+    border-radius: 28px;
+    min-width: 200px;
+    height: 64px;
+    line-height: 40px;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPHomeHero .action-button {
+    padding: 16px 40px;
+    font-size: 26px;
+    border-radius: 32px;
+    min-width: 240px;
+    height: 76px;
+    line-height: 44px;
+  }
+}
+
+/* 使用本地字体 */
+body {
+  font-family: 'MinecraftRegular', 'MinecraftChinese', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'MinecraftTen', 'MinecraftTitle', sans-serif;
+}
+
+/* 首页按钮容器 */
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 16px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* 确保 Minecraft 按钮样式正确应用 */
+.button {
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  min-height: 60px;
+  font-size: 20px;
+  padding: 15px 30px !important;
+  margin: 0.5rem;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+/* 响应式按钮大小调整 */
+@media (min-width: 768px) {
+  .button {
+    min-width: 240px;
+    min-height: 70px;
+    font-size: 24px;
+    padding: 20px 40px !important;
+    margin: 1rem;
+    text-shadow: 2.5px 2.5px 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (min-width: 992px) {
+  .button {
+    min-width: 280px;
+    min-height: 80px;
+    font-size: 26px;
+    padding: 25px 45px !important;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* 特别放大首页的 Minecraft 按钮 */
+.button-container .button {
+  min-width: 220px;
+  min-height: 70px;
+  font-size: 22px;
+  padding: 20px 35px !important;
+  margin: 1rem;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .button-container .button {
+    min-width: 260px;
+    min-height: 80px;
+    font-size: 24px;
+    padding: 25px 40px !important;
+    text-shadow: 2.5px 2.5px 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (min-width: 992px) {
+  .button-container .button {
+    min-width: 300px;
+    min-height: 90px;
+    font-size: 26px;
+    padding: 30px 50px !important;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* 确保主页副标题在明亮模式下可见 */
+.VPHomeHero .tagline {
+  color: var(--vp-home-hero-text-color) !important;
+}
+
+/* 明亮模式下的按钮字体增强 */
+@media (min-width: 768px) {
+  html:not(.dark) .button {
+    text-shadow: 2.5px 2.5px 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (min-width: 992px) {
+  html:not(.dark) .button {
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* 公告框样式 */
+.announcement {
+  background-color: var(--background-color);
+  border: 3px solid #1e1e1f;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 800px;
+  box-shadow: inset 0 6px #242425;
+  font-family: 'MinecraftRegular', sans-serif;
+}
+
+.announcement h2 {
+  margin-top: 0;
+  color: var(--text-color);
+  font-family: 'MinecraftTen', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.announcement p {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-family: 'MinecraftRegular', sans-serif;
+}
+
+/* 明亮模式下的公告框 */
+html:not(.dark) .announcement {
+  background-color: #48494a;
+}
+
+html:not(.dark) .announcement h2,
+html:not(.dark) .announcement p {
+  color: #fff;
+}
+
+/* 暗黑模式下的公告框 */
+html.dark .announcement {
+  background-color: #313233;
+}
+
+html.dark .announcement h2,
+html.dark .announcement p {
+  color: #fff;
+}
+
+/* 修复明亮模式下的文字颜色问题 */
+html:not(.dark) body,
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4,
+html:not(.dark) h5,
+html:not(.dark) h6,
+html:not(.dark) p,
+html:not(.dark) span,
+html:not(.dark) div {
+  color: #000000;
+}
+
+/* 特别修复普通文本在明亮模式下的颜色 */
+html:not(.dark) {
+  --text-color: #000000;
+}
