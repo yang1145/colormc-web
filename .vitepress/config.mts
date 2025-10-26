@@ -5,6 +5,9 @@ export default defineConfig({
   title: "PCL社区版",
   description: "PCL社区版启动器非官方网站",
   base: '/',
+  head: [
+    ['link', { rel: 'icon', href: '/logo.png' }]
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
