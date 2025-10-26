@@ -18,6 +18,6 @@ hero:
 
 <div class="announcement">
   <h2>最新公告</h2>
-  <p>欢迎使用 PCL 社区版启动器！我们致力于为您提供最佳的 Minecraft 游戏体验。</p>
-  <p>最新版本现已发布，带来了更多功能和改进。</p>
+  <p>我们诚挚的邀请您来游玩Timeless永恒服务器，在这里开启您的第二人生。</p>
+  <p>使用PCL-CE启动器来获取<a href="https://20070223.xyz/">Timeless永恒服务器</a>的最佳体验！</p>
 </div>
