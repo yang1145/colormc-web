@@ -222,6 +222,81 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* 在媒体查询中隐藏移动端汉堡菜单 */
+@media (max-width: 768px) {
+  .VPNavBarHamburger {
+    display: none !important;
+  }
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  /* 首页按钮容器在移动端改为居中显示 */
+  .button-container {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* 移动端按钮调整 */
+  .button {
+    min-width: 200px;
+    min-height: 60px;
+    font-size: 18px;
+    padding: 15px 25px !important;
+    margin: 0.5rem;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  }
+  
+  /* 移动端公告框调整 */
+  .announcement {
+    padding: 15px;
+    margin: 20px auto;
+  }
+  
+  /* 移动端主标题调整 */
+  .VPHomeHero .name {
+    font-size: 2rem !important;
+  }
+  
+  /* 移动端副标题调整 */
+  .VPHomeHero .tagline {
+    font-size: 1.2rem !important;
+  }
+  
+  /* 移动端内容容器调整 */
+  .VPContent {
+    padding: 0 12px;
+  }
+}
+
+/* 小屏幕设备优化 */
+@media (max-width: 480px) {
+  .button {
+    min-width: 160px;
+    min-height: 50px;
+    font-size: 16px;
+    padding: 12px 20px !important;
+    margin: 0.3rem;
+  }
+  
+  .VPHomeHero .name {
+    font-size: 1.5rem !important;
+  }
+  
+  .VPHomeHero .tagline {
+    font-size: 1rem !important;
+  }
+  
+  .announcement {
+    padding: 10px;
+    margin: 15px auto;
+  }
+  
+  .announcement h2 {
+    font-size: 1.2rem;
+  }
+}
+
 /* 确保主页副标题在明亮模式下可见 */
 .VPHomeHero .tagline {
   color: var(--vp-home-hero-text-color) !important;
