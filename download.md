@@ -15,8 +15,8 @@ const version = ref({
 const downloadLinks = ref([
   { name: 'GITHUB', url: 'https://github.com/PCL-Community/PCL2-CE/releases/download/2.13.3/PCL2_CE_Release_x64.exe' },
   { name: '七牛云线路', url: '' },
-  { name: 'Cloudflare线路', url: '' }
-  { name: 'Edgeone线路', url: '' }
+  { name: 'CF线路', url: '' },
+  { name: 'EO线路', url: '' }
 ])
 </script>
 
