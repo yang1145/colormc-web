@@ -9,9 +9,15 @@ const version = ref({
   version: '2.13.3', 
   date: '2025-10-05', 
   size: '11.6MB',
-  features: ['自 2.13.0 起，PCL CE 将需要 .NET 8 桌面运行时才能运行。', '如果你还未安装，请下载并安装 .NET 8 桌面运行时。'],
-  downloadLink: '/PCL2_CE_Release_x64.exe'
+  features: ['自 2.13.0 起，PCL CE 将需要 .NET 8 桌面运行时才能运行。', '如果你还未安装，请下载并安装 .NET 8 桌面运行时。']
 })
+
+const downloadLinks = ref([
+  { name: 'GITHUB', url: 'https://github.com/PCL-Community/PCL2-CE/releases/download/2.13.3/PCL2_CE_Release_x64.exe' },
+  { name: '七牛云线路', url: '' },
+  { name: 'Cloudflare线路', url: '' }
+  { name: 'Edgeone线路', url: '' }
+])
 </script>
 
 # 下载PCL启动器
@@ -22,7 +28,18 @@ const version = ref({
   <ul>
     <li v-for="(feature, index) in version.features" :key="index">{{ feature }}</li>
   </ul>
-  <a :href="version.downloadLink" class="download-button">立即下载</a>
+  
+  <div class="download-buttons">
+    <a 
+      v-for="(link, index) in downloadLinks" 
+      :key="index"
+      :href="link.url" 
+      class="download-button"
+      target="_blank"
+    >
+      {{ link.name }}
+    </a>
+  </div>
 </div>
 
 <style scoped>
@@ -52,6 +69,13 @@ const version = ref({
   margin-bottom: 5px;
 }
 
+.download-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
 .download-button {
   display: inline-block;
   background-color: #3eaf7c;
@@ -61,9 +85,22 @@ const version = ref({
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
 }
 
 .download-button:hover {
   background-color: #2c8a62;
+}
+
+@media (max-width: 768px) {
+  .download-buttons {
+    flex-direction: column;
+  }
+  
+  .download-button {
+    min-width: auto;
+  }
 }
 </style>
