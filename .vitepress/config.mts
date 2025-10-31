@@ -5,6 +5,7 @@ export default defineConfig({
   title: "ColorMC启动器",
   description: "ColorMC启动器非官方网站",
   base: '/',
+  ignoreDeadLinks: true,
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
   ],
