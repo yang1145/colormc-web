@@ -67,6 +67,30 @@ hero:
     align-items: center;
     gap: 10px;
   }
+  
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .feature-card {
+    padding: 15px;
+  }
+}
+
+/* 在更小的屏幕上进一步优化 */
+@media (max-width: 480px) {
+  .feature-highlights {
+    padding: 15px;
+  }
+  
+  .feature-grid {
+    gap: 10px;
+  }
+  
+  .feature-card {
+    padding: 12px;
+  }
 }
 </style>
 
