@@ -77,18 +77,32 @@ const downloadLinks = ref([
   display: inline-block;
   background-color: #3eaf7c;
   color: white;
-  padding: 10px 20px;
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s;
-  flex: 1;
-  min-width: 120px;
   text-align: center;
+  border: 2px solid #2c8a62;
+  box-shadow: 0 4px 0 #2c8a62;
+  font-size: 14px;
+  padding: 8px 16px;
+  margin: 4px;
+  position: relative;
+  cursor: pointer;
+  min-width: 100px;
+  width: auto;
+  flex: 0 1 auto;
 }
 
 .download-button:hover {
   background-color: #2c8a62;
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #2c8a62;
+}
+
+.download-button:active {
+  transform: translateY(4px);
+  box-shadow: none;
 }
 
 @media (max-width: 768px) {
@@ -98,6 +112,15 @@ const downloadLinks = ref([
   
   .download-button {
     min-width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .download-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 6px;
+    min-width: 120px;
   }
 }
 </style>
