@@ -104,3 +104,33 @@ hero:
     </div>
   </div>
 </div>
+
+<div class="feature-highlights">
+  <h2>功能展示</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <img src="/0109.png" alt="角色皮肤" style="width: 100%; border-radius: 8px;" />
+      <h3 style="margin-top: 10px;">角色皮肤</h3>
+    </div>
+    <div class="feature-card">
+      <img src="/0066.png" alt="NBT修改器" style="width: 100%; border-radius: 8px;" />
+      <h3 style="margin-top: 10px;">NBT修改器</h3>
+    </div>
+    <div class="feature-card">
+      <img src="/0106.png" alt="模组更新" style="width: 100%; border-radius: 8px;" />
+      <h3 style="margin-top: 10px;">模组更新</h3>
+    </div>
+    <div class="feature-card">
+      <img src="/0102.png" alt="添加资源" style="width: 100%; border-radius: 8px;" />
+      <h3 style="margin-top: 10px;">添加资源</h3>
+    </div>
+    <div class="feature-card">
+      <img src="/0063.png" alt="世界管理" style="width: 100%; border-radius: 8px;" />
+      <h3 style="margin-top: 10px;">世界管理</h3>
+    </div>
+    <div class="feature-card">
+      <img src="/0020.png" alt="账号管理" style="width: 100%; border-radius: 8px;" />
+      <h3 style="margin-top: 10px;">账号管理</h3>
+    </div>
+  </div>
+</div>
