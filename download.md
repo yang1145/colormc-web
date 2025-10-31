@@ -1,27 +1,28 @@
 ---
-title: 下载PCL-CE启动器
+title: 下载ColorMC启动器
 ---
 
 <script setup>
 import { ref } from 'vue'
 
 const version = ref({ 
-  version: '2.13.3', 
-  date: '2025-10-05', 
-  size: '11.6MB',
-  features: ['自 2.13.0 起，PCL CE 将需要 .NET 8 桌面运行时才能运行。', '如果你还未安装，请下载并安装 .NET 8 桌面运行时。']
+  version: 'A35', 
+  date: '2025-03-16', 
+  size: '待确认',
+  features: ['ColorMC是一个多实例Minecraft启动器', '支持多种账户类型登录，包括离线、微软、外置登录等', '支持多种模组加载器，如Forge、Fabric、Quilt等']
 })
 
 const downloadLinks = ref([
-  { name: '立即下载', url: 'https://github.com/PCL-Community/PCL2-CE/releases/download/2.13.3/PCL2_CE_Release_x64.exe' },
+  { name: '正式版', url: 'https://github.com/Coloryr/ColorMC/releases' },
+  { name: '测试版', url: 'https://github.com/Coloryr/ColorMC/actions' },
 ])
 </script>
 
-# 下载PCL启动器
+# 下载ColorMC启动器
 
 <div class="version-card">
   <h3>{{ version.version }}</h3>
-  <p class="version-info">发布日期：{{ version.date }} | 大小：{{ version.size }}</p>
+  <p class="version-info">更新时间：{{ version.date }} | 大小：{{ version.size }}</p>
   <ul>
     <li v-for="(feature, index) in version.features" :key="index">{{ feature }}</li>
   </ul>

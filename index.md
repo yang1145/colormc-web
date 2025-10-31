@@ -2,12 +2,12 @@
 layout: home
 
 hero:
-  name: "PCL社区版"
-  text: "开源免费的 Minecraft 启动器"
-  tagline: 强大的 Minecraft 启动器，提供最佳的游戏体验。支持多版本管理、模组管理、账户管理等功能。
+  name: "ColorMC"
+  text: "最强大的 Minecraft 启动器"
+  tagline: 开源免费的 Minecraft 启动器，提供最佳的游戏体验。支持多实例管理、模组管理、账户管理等功能。
   image:
     src: /logo.png
-    alt: PCL-CE启动器
+    alt: ColorMC启动器
 
 ---
 
@@ -47,13 +47,13 @@ html.dark .announcement-box h2 {
 }
 </style>
 
-<div class="announcement-box">
-  <h2>最新公告</h2>
-  <p>本网站为PCL-CE非官方网站，与PCL-CE不存在任何附属关系。</p>
-  <p>本网站仅用于提供PCL-CE文件分发，请访问PCL-CE官方Github获取最新信息。</p>
-</div>
-
 <div class="button-container">
   <MinecraftButton link="/download" text="立即下载" type="primary"></MinecraftButton>
   <MinecraftButton link="/features" text="功能介绍" type="secondary"></MinecraftButton>
+</div>
+
+<div class="announcement-box">
+  <h2>最新公告</h2>
+  <p>目前没有公告</p>
+  <p>目前没有公告</p>
 </div>

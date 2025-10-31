@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "PCL社区版",
-  description: "PCL社区版启动器非官方网站",
+  title: "ColorMC启动器",
+  description: "ColorMC启动器非官方网站",
   base: '/',
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
@@ -14,7 +14,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '功能介绍', link: '/features' },
       { text: '下载', link: '/download' },
-      { text: '文档', link: '/guide' }
+      { text: '文档', link: '/guide/guide' }
     ],
 
     sidebar: [
@@ -35,12 +35,12 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/PCL-Community/PCL2-CE' }
+      { icon: 'github', link: 'https://github.com/Coloryr/ColorMC' }
     ],
 
     footer: {
-      message: 'Released under the PCL-CE License.',
-      copyright: '此网站由冰晶石构建 | 本网站为 PCL-CE 启动器非官方网站<br>PCL社区版基于龙腾猫跃 PCL 构建 | 本网站与PCL-CE无任何附属关系'
+      message: 'Released under the Apache-2.0 License.',
+      copyright: '此网站由冰晶石构建 | Copyright © 2025 ColorMC. All Rights Reserved.'
     }
   },
   appearance: true,
