@@ -40,7 +40,7 @@ export default defineConfig({
 
     footer: {
       message: 'Released under the PCL-CE License.',
-      copyright: '此网站由冰晶石构建 | 本网站为 PCL-CE 启动器非官方网站<br>PCL社区版基于龙腾猫跃 PCL 构建 | Copyright © 2025 PCL 社区版'
+      copyright: '此网站由冰晶石构建 | 本网站为 PCL-CE 启动器非官方网站<br>PCL社区版基于龙腾猫跃 PCL 构建 | 本网站与PCL-CE无任何附属关系'
     }
   },
   appearance: true,
