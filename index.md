@@ -12,6 +12,43 @@ hero:
 ---
 
 <style>
+/* 默认隐藏移动端hero区域 */
+.hero-mobile {
+  display: none;
+}
+
+.hero-mobile-inner {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-mobile-inner h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  background: linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+}
+
+.hero-mobile-inner p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: var(--vp-c-text-1);
+  text-align: center;
+}
+
+.hero-mobile-inner img {
+  max-width: 150px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
 .feature-highlights {
   margin: 20px 0;
   padding: 20px;
@@ -61,7 +98,18 @@ hero:
   flex-wrap: wrap;
 }
 
+/* 移动端样式 */
 @media (max-width: 640px) {
+  /* 隐藏桌面版hero */
+  .VPHomeHero {
+    display: none !important;
+  }
+  
+  /* 显示移动版hero */
+  .hero-mobile {
+    display: block;
+  }
+  
   .button-container {
     justify-content: center;
     flex-direction: column;
@@ -76,6 +124,17 @@ hero:
   
   .feature-card {
     padding: 15px;
+  }
+  
+  /* 移动端hero区域中与标题字号相同的一行 */
+  .hero-mobile-inner .hero-subtitle {
+    font-size: 2rem;
+    margin: 10px 0;
+    background: linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
   }
 }
 
@@ -92,8 +151,31 @@ hero:
   .feature-card {
     padding: 12px;
   }
+  
+  .hero-mobile-inner h1 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-mobile-inner p {
+    font-size: 0.9rem;
+  }
+  
+  /* 小屏幕下副标题也相应缩小 */
+  .hero-mobile-inner .hero-subtitle {
+    font-size: 1.5rem;
+  }
 }
 </style>
+
+<!-- 移动端专用hero区域 -->
+<div class="hero-mobile">
+  <div class="hero-mobile-inner">
+    <img src="/logo.png" alt="ColorMC启动器">
+    <h1>ColorMC</h1>
+    <h2 class="hero-subtitle">最强大的 Minecraft 启动器</h2>
+    <p>开源免费的 Minecraft 启动器，提供最佳的游戏体验。支持多实例管理、模组管理、账户管理等功能。</p>
+  </div>
+</div>
 
 <div class="button-container">
   <MinecraftButton link="/download" text="立即下载" type="primary"></MinecraftButton>
