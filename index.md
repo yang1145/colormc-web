@@ -55,7 +55,7 @@ hero:
 
 .button-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
   margin: 30px 0;
   flex-wrap: wrap;
@@ -63,6 +63,7 @@ hero:
 
 @media (max-width: 640px) {
   .button-container {
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     gap: 10px;
