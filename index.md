@@ -128,13 +128,19 @@ hero:
   
   /* 移动端hero区域中与标题字号相同的一行 */
   .hero-mobile-inner .hero-subtitle {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 10px 0;
-    background: linear-gradient(120deg, #bd34fe 30%, #41d1ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
     text-align: center;
+    color: #000000;
+  }
+  
+  .hero-mobile-inner h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+  }
+  
+  html.dark .hero-mobile-inner .hero-subtitle {
+    color: #ffffff;
   }
 }
 
@@ -153,7 +159,7 @@ hero:
   }
   
   .hero-mobile-inner h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   
   .hero-mobile-inner p {
@@ -162,7 +168,7 @@ hero:
   
   /* 小屏幕下副标题也相应缩小 */
   .hero-mobile-inner .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 </style>
