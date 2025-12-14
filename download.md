@@ -214,6 +214,35 @@ onMounted(async () => {
   background-color: #0056b3;
 }
 
+/* 暗黑模式适配 */
+html.dark .version-card {
+  border: 1px solid #444;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  background-color: #2d2d2d;
+}
+
+html.dark .version-card h3,
+html.dark .assets-section h3 {
+  color: #fff;
+}
+
+html.dark .version-info {
+  color: #aaa;
+}
+
+html.dark .asset-item {
+  border: 1px solid #444;
+  background-color: #2d2d2d;
+}
+
+html.dark .asset-name {
+  color: #fff;
+}
+
+html.dark .asset-meta {
+  color: #aaa;
+}
+
 @media (max-width: 768px) {
   .download-buttons {
     flex-direction: column;
